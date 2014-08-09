@@ -29,6 +29,23 @@ PRODUCT_COPY_FILES := \
 PRODUCT_PACKAGES += \
 	camera.flo
 
+# for Gecko to support bluedroid stack
+PRODUCT_PACKAGES += \
+    bluetooth.default
+
+# for Gecko
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.moz.has_home_button=0 \
+    ro.moz.nfc.enabled=true
+
+PRODUCT_PACKAGES += \
+    nfcd
+
+PRODUCT_COPY_FILES += \
+    device/asus/flo/volume.cfg:system/etc/volume.cfg
+
+GAIA_DEV_PIXELS_PER_PX := 2.0
+
 # NFC
 PRODUCT_PACKAGES += \
     nfc_nci.flo

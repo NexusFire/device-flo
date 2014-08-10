@@ -34,13 +34,13 @@ install_blobs() {
     done
 }
 
-HAMMERHEAD_BLOBS="
-    broadcom-flo-kot49h-c33beb3d.tgz
+FLO_BLOBS="
     asus-flo-kot49h-a9532596.tgz
+    broadcom-flo-kot49h-c33beb3d.tgz
     qcom-flo-kot49h-f92d75b1.tgz
     "
 
 CSUM_LIST="$PWD/blob-shasums"
 
 cd ../../.. &&
-install_blobs nexus-7 "$FLO_BLOBS" "$CSUM_LIST"
+install_blobs flo "$FLO_BLOBS" "$CSUM_LIST"
